@@ -1,0 +1,210 @@
+<SyntaxDefinition xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
+  <Color name="Comment" foreground="#666666" exampleText="-- comment" />
+  <Color name="String" foreground="#9ECE6A" />
+  <Color name="Punctuation" />
+  <Color name="Keywords" foreground="#BB9AF7" />
+  <Color name="Game" foreground="#6ca2f7" />
+  <Color name="game" foreground="#ff9e64" />
+  <Color name="Players" foreground="#51c2ff" />
+  <Color name="MethodCall" foreground="#0db9d7" />
+  <Color name="NumberLiteral" foreground="#FF9E64" />
+  <Color name="NilKeyword" />
+  <Color name="TrueFalse" foreground="#ff66cccc" />
+  <Color name="Visibility" foreground="#F7768E" />
+
+  <RuleSet>
+    <Span color="Comment">
+      <Begin>--</Begin>
+    </Span>
+
+    <Span color="Comment" multiline="true">
+      <Begin>--\[[=]*\[</Begin>
+      <End>\][=]*]</End>
+    </Span>
+
+    <Span color="String">
+      <Begin>"</Begin>
+      <End>"</End>
+      <RuleSet>
+        <Span begin="\\" end="." />
+      </RuleSet>
+    </Span>
+
+    <Keywords color="TrueFalse">
+      <Word>true</Word>
+      <Word>false</Word>
+    </Keywords>
+
+    <Keywords color="game">
+      <Word>getgenv</Word>
+      <Word>_G</Word>
+      <Word>COREGUI</Word>
+      <Word>IY_LOADED</Word>
+    </Keywords>
+
+    <Keywords color="Keywords">
+      <Word>and</Word>
+      <Word>break</Word>
+      <Word>do</Word>
+      <Word>else</Word>
+      <Word>elseif</Word>
+      <Word>false</Word>
+      <Word>for</Word>
+      <Word>function</Word>
+      <Word>if</Word>
+      <Word>in</Word>
+      <Word>local</Word>
+      <Word>nil</Word>
+      <Word>not</Word>
+      <Word>or</Word>
+      <Word>repeat</Word>
+      <Word>return</Word>
+      <Word>then</Word>
+      <Word>true</Word>
+      <Word>until</Word>
+      <Word>while</Word>
+      <Word>using</Word>
+      <Word>continue</Word>
+      <Word>function</Word>
+      <Word>end</Word>
+      <Word>new</Word>
+      <Word>HttpGet</Word>
+    </Keywords>
+
+    <Keywords color="Game">
+      <Word>Workspace</Word>
+      <Word>workspace</Word>
+      <Word>ServerStorage</Word>
+      <Word>ServerScriptService</Word>
+      <Word>ServerStorage</Word>
+      <Word>ReplicatedStorage</Word>
+      <Word>ReplicatedFirst</Word>
+      <Word>StarterGui</Word>
+      <Word>Instance</Word>
+      <Word>Anchored</Word>
+      <Word>Axis</Word>
+      <Word>BackgroundColor3</Word>
+      <Word>BackgroundTransparency</Word>
+      <Word>BodyPart</Word>
+      <Word>BodyPartR15</Word>
+      <Word>BodyPartR6</Word>
+      <Word>BodyPartRigType</Word>
+      <Word>CameraMode</Word>
+      <Word>CFrame</Word>
+      <Word>CollisionFidelity</Word>
+      <Word>CollisionGroup</Word>
+      <Word>DataType</Word>
+      <Word>DevComputerMovementMode</Word>
+      <Word>DevTouchMovementMode</Word>
+      <Word>DialogBehaviorType</Word>
+      <Word>DialogPurpose</Word>
+      <Word>EasingDirection</Word>
+      <Word>EasingStyle</Word>
+      <Word>FillDirection</Word>
+      <Word>Font</Word>
+      <Word>FontSize</Word>
+      <Word>FormFactor</Word>
+      <Word>HorizontalAlignment</Word>
+      <Word>HumanoidStateType</Word>
+      <Word>Parent</Word>
+      <Word>InOut</Word>
+      <Word>JointCreationMode</Word>
+      <Word>JointType</Word>
+      <Word>KeyCode</Word>
+      <Word>Limb</Word>
+      <Word>Material</Word>
+      <Word>MeshType</Word>
+      <Word>MouseButton</Word>
+      <Word>MotorFeature</Word>
+      <Word>MoveState</Word>
+      <Word>NameOcclusion</Word>
+      <Word>NormalId</Word>
+      <Word>Orientation</Word>
+      <Word>PartType</Word>
+      <Word>PathStatus</Word>
+      <Word>Platform</Word>
+      <Word>PoseEasingDirection</Word>
+      <Word>PoseEasingStyle</Word>
+      <Word>Position</Word>
+      <Word>RelativeTo</Word>
+      <Word>RenderFidelity</Word>
+      <Word>ResizeMode</Word>
+      <Word>RotationType</Word>
+      <Word>ScaleType</Word>
+      <Word>Size</Word>
+      <Word>SizeConstraint</Word>
+      <Word>SortOrder</Word>
+      <Word>StudioStyleGuideColor</Word>
+      <Word>StudioStyleGuideModifier</Word>
+      <Word>SurfaceType</Word>
+      <Word>Text</Word>
+      <Word>TextTransparency</Word>
+      <Word>TextSize</Word>
+      <Word>TextColor3</Word>
+      <Word>TextXAlignment</Word>
+      <Word>TextYAlignment</Word>
+      <Word>TextWrapped</Word>
+      <Word>ThumbnailSize</Word>
+      <Word>ThumbnailType</Word>
+      <Word>ToolMovementMode</Word>
+      <Word>TorsoRigType</Word>
+      <Word>Type3RigType</Word>
+      <Word>UDim</Word>
+      <Word>UDim2</Word>
+      <Word>VerticalAlignment</Word>
+      <Word>VerticalSurface</Word>
+      <Word>ZIndex</Word>
+    </Keywords>
+
+    <Keywords color="game">
+      <Word>game</Word>
+    </Keywords>
+
+    <Keywords color="Players">
+      <Word>Players</Word>
+      <Word>LocalPlayer</Word>
+      <Word>=</Word>
+      <Word>-</Word>
+      <Word>+</Word>
+      <Word>%</Word>
+    </Keywords>
+
+    <Keywords color="Visibility">
+      <Word>local</Word>
+    </Keywords>
+
+    <Keywords color="NilKeyword">
+      <Word>nil</Word>
+    </Keywords>
+
+    <Rule color="MethodCall">
+      \b[\d\w_]+(?!\s*HttpGet\s*\()(?=\s*\() # Identifier followed by (
+    </Rule>
+
+    <Rule color="MethodCall">
+      \b[\d\w_]+(?=\s*") # Identifier followed by "
+    </Rule>
+
+    <Rule color="MethodCall">
+      \b[\d\w_]+(?=\s*') # Identifier followed by '
+    </Rule>
+
+    <Rule color="MethodCall">
+      \b[\d\w_]+(?=\s*\{) # Identifier followed by {
+    </Rule>
+
+    <Rule color="MethodCall">
+      \b[\d\w_]+(?=\s*\[) # Identifier followed by [
+    </Rule>
+
+    <Rule color="NumberLiteral">
+      \b0[xX][0-9a-fA-F]+ # Hex number
+      |
+      (\b\d+(\.[0-9]+)?|\.[0-9]+)([eE][+-]?[0-9]+)? # Decimal number with optional exponent
+    </Rule>
+
+    <Rule color="Punctuation">
+      [?,.;()\[\]{}+\-/%*&lt;&gt;^+~!|&amp;]+ # Punctuation characters
+    </Rule>
+  </RuleSet>
+</SyntaxDefinition>
